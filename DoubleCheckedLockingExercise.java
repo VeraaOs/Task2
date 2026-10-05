@@ -7,12 +7,6 @@ import java.util.concurrent.TimeUnit;
 import java.util.concurrent.TimeoutException;
 import java.util.concurrent.atomic.AtomicInteger;
 
-/*
-ДОПОЛНИТЕЛЬНАЯ ЗАДАЧА. Double-Checked Locking
-Объект ExpensiveResource должен создаваться лениво: только при первом вызове
-getInstance(). После создания все потоки должны получать один и тот же,
-полностью сконструированный экземпляр.
-*/
 public class DoubleCheckedLockingExercise {
     private static final class ExpensiveResource {
         private static final AtomicInteger CONSTRUCTIONS = new AtomicInteger();
